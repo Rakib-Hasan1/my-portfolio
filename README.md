@@ -56,15 +56,14 @@ VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 Make sure to get your credentials from https://emailjs.com
 
-📸 Screenshots
-Desktop View   	Mobile View
-|--------------|-------------|
+## 📸 Screenshots
 
-Desktop view
-![localhost_5173_](./public/https://github.com/user-attachments/assets/b808bd39-fc85-483c-bc4a-e1e550c5af7d)
+### 🖥 Desktop View
+![desktop-view](https://github.com/user-attachments/assets/bb38bc47-483d-4df8-9913-1c2f3e7ad6b8)
 
-Mobile view
-![localhost_5173_(iPhone 12 Pro)](./public/https://github.com/user-attachments/assets/c4a2ed54-bd80-4150-9191-f38fa4d5a6e6)
+
+### 📱 Mobile View
+![mobile-view](https://github.com/user-attachments/assets/95075ac7-20a4-4ec1-bca3-af2abbc39db5)
 
 
 
