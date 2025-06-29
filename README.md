@@ -3,7 +3,7 @@
 Welcome to my personal developer portfolio!  
 Built with modern technologies to showcase my skills, projects, and journey as a MERN Stack Developer.
 
-Live Site: [Visit Portfolio](https://your-live-site-link.com)
+Live Site: [Visit Portfolio](https://rakib-portfolio-8a8b4.web.app/)
 
 ---
 
