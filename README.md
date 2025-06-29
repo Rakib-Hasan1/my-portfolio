@@ -59,11 +59,11 @@ Make sure to get your credentials from https://emailjs.com
 ## 📸 Screenshots
 
 ### 🖥 Desktop View
-![desktop-view](https://github.com/user-attachments/assets/bb38bc47-483d-4df8-9913-1c2f3e7ad6b8)
+![Image](https://github.com/user-attachments/assets/f3547a68-6286-42a7-b40f-a7db297a6095)
 
 
 ### 📱 Mobile View
-![mobile-view](https://github.com/user-attachments/assets/95075ac7-20a4-4ec1-bca3-af2abbc39db5)
+![Image](https://github.com/user-attachments/assets/fe802577-fe60-4882-ba90-edc48ef51be1)
 
 
 
