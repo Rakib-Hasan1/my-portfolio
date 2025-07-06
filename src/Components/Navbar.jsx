@@ -59,7 +59,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
-            to="/your-cv.pdf" // or use href="/your-cv.pdf" if it's a normal <a>
+            to="/your-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-warning btn-block mx-auto text-center"
