@@ -27,14 +27,13 @@ const Navbar = () => {
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-cyan-400 transition-all group-hover:w-full"></span>
             </Link>
           ))}
-          <Link
-            to="/your-cv.pdf" // or use href="/your-cv.pdf" if it's a normal <a>
-            target="_blank"
-            rel="noopener noreferrer"
+          <a
+            href="/Resume.pdf"
+            download
             className="btn btn-warning mx-auto text-center"
           >
             Download CV
-          </Link>
+          </a>
         </div>
 
         <div className="md:hidden">
