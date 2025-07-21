@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import cv from "/Rakib Hasan full stack developer resume.pdf"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,9 @@ const Navbar = () => {
   const navLinks = ["home", "about", "skills", "projects", "contact"];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-black/30 text-white px-6 py-4 shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur bg-black/30 text-white px-10 md:px-20 lg:px-30 py-3 lg:py-4 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold tracking-widest text-cyan-400">
+        <h1 className="text-xl font-bold tracking-widest text-cyan-500">
           Rakib.dev
         </h1>
 
@@ -28,8 +29,8 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="/Resume.pdf"
-            download
+            href={cv}
+            download="Rakib Hasan full stack developer resume.pdf"
             className="btn btn-warning mx-auto text-center"
           >
             Download CV

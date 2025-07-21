@@ -18,6 +18,7 @@ import {
   SiVercel,
   SiNetlify,
   SiJsonwebtokens,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const skills = [
@@ -25,6 +26,7 @@ const skills = [
   { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS" },
   { icon: <FaJs className="text-yellow-400" />, name: "JavaScript" },
   { icon: <FaReact className="text-cyan-400" />, name: "React" },
+  { icon: <SiNextdotjs className="text-white drop-shadow-[0_0_6px_rgba(59,130,246,0.8)]" />, name: "Next.js" },
   { icon: <SiTailwindcss className="text-cyan-500" />, name: "Tailwind CSS" },
   { icon: <SiExpress className="text-gray-300" />, name: "Express.js" },
   { icon: <FaNode className="text-green-500" />, name: "Node.js" },
