@@ -1,27 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import image from "../assets/My-photo.jpg"
+import { Link } from "react-scroll";
 
 const Hero = () => {
+
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between md:gap-8 px-6 md:px-20 lg:px-40 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white relative"
     >
 
-
-
-{/* <div className="min-h-screen w-full bg-[#0f172a] relative"> */}
-  {/* Blue Radial Glow Background */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
-    }}
-  />
-     {/* Your Content/Components */}
-{/* </div> */}
-
+      {/* Blue Radial Glow Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
+        }}
+      />
+      {/* Your Content/Components */}
 
 
       {/* Left: Bio */}
@@ -38,12 +35,14 @@ const Hero = () => {
           A passionate Junior <span className="text-cyan-300 font-semibold">Full Stack Developer</span> crafting clean, high-performance web experiences with a love for beautiful UI and scalable backend logic.
         </p>
         <div className="mt-6">
-          <a
-            href="#projects"
-            className="px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-cyan-600 transition-all shadow-lg"
+          <button
+            onClick={() => {
+              document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-cyan-600 transition-all shadow-lg cursor-pointer"
           >
             View Projects
-          </a>
+          </button>
         </div>
       </motion.div>
 
