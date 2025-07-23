@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import job_portal_img from "../assets/Screenshot 2025-06-29 135638.png";
 import FlagshipFaceOff from "../assets/Screenshot 2025-06-29 1358745.png";
 import dragon_news from "../assets/dragon news.png";
+import snapfix from '../assets/snapfix.png';
 
 const Projects = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleDescription = () => setIsExpanded(!isExpanded);
   const cards = [
+    {
+      title: "SnapFix",
+      image: snapfix,
+      desc: "SnapFix is a full-stack web application that connects users with verified home service professionals for quick and reliable repair or maintenance tasks. The platform offers seamless service booking, real-time status updates, user authentication, and role-based dashboards for both users and providers.",
+      tags: ["React", "React-Router", "Context API", "MongoDB", "Node.js", "Express.js", "JWT", "Tailwind"],
+      live: "https://snap-fix-assignment-11.web.app",
+      code: "https://github.com/Rakib-Hasan1/SnapFix-client",
+    },
     {
       title: "CAREER-CODE",
       image: job_portal_img,
       desc: "A comprehensive, full-featured job portal designed to bridge the gap between job seekers and employers. CAREER-CODE enables seamless job posting, searching, applying, and managing job-related activities with a secure and intuitive user experience.",
-      tags: ["React", "MongoDB", "Node.js", "Express.js", "JWT"],
+      tags: ["React", "React-Router", "Context API", "MongoDB", "Node.js", "Express.js", "JWT"],
       live: "https://basic-job-portal-659eb.web.app",
       code: "https://github.com/Rakib-Hasan1/Job-portal-client/tree/main",
     },
@@ -68,7 +79,27 @@ const Projects = () => {
               <h3 className="text-xl font-semibold text-cyan-300 mb-2">
                 {card.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-4">{card.desc}</p>
+
+              <div className="mb-3">
+                <p
+                  className={`text-gray-400 text-sm ${isExpanded ? "" : "line-clamp-2"
+                    }`}
+                >
+                  {card.desc}
+                </p>
+
+                {card.desc.split(" ").length > 15 && (
+                  <button
+                    onClick={toggleDescription}
+                    className="text-blue-500 text-sm focus:outline-none cursor-pointer hover:underline"
+                  >
+                    {isExpanded ? "See less" : "Read more"}
+                  </button>
+                )}
+              </div>
+
+
+              {/* <p className="text-gray-400 text-sm mb-4">{card.desc}</p> */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {card.tags.map((tag) => (
                   <span
