@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between md:gap-8 px-6 md:px-20 lg:px-40 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white relative"
+      className="min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-between md:gap-8 px-6 md:px-20 lg:px-40 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white relative"
     >
 
       {/* Blue Radial Glow Background */}
@@ -34,7 +34,7 @@ const Hero = () => {
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
           A passionate Junior <span className="text-cyan-300 font-semibold">Full Stack Developer</span> crafting clean, high-performance web experiences with a love for beautiful UI and scalable backend logic.
         </p>
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <button
             onClick={() => {
               document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
@@ -43,7 +43,7 @@ const Hero = () => {
           >
             View Projects
           </button>
-        </div>
+        </div> */}
       </motion.div>
 
       {/* Right: Image */}
