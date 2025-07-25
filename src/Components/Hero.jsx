@@ -34,16 +34,7 @@ const Hero = () => {
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
           A passionate Junior <span className="text-cyan-300 font-semibold">Full Stack Developer</span> crafting clean, high-performance web experiences with a love for beautiful UI and scalable backend logic.
         </p>
-        {/* <div className="mt-6">
-          <button
-            onClick={() => {
-              document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-cyan-600 transition-all shadow-lg cursor-pointer"
-          >
-            View Projects
-          </button>
-        </div> */}
+
       </motion.div>
 
       {/* Right: Image */}
