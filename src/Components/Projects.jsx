@@ -1,123 +1,80 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import job_portal_img from "../assets/Screenshot 2025-06-29 135638.png";
-import FlagshipFaceOff from "../assets/Screenshot 2025-06-29 1358745.png";
-import dragon_news from "../assets/dragon news.png";
-import snapfix from '../assets/snapfix.png';
+import React from 'react';
+import { Link } from 'react-router';
+import project1 from "../assets/snap-fix-assignment-11.web.app_.png"
+import project2 from "../assets/trackforce-d041e.web.app_.png"
+import project3 from "../assets/zap-shift-ee5f9.web.app_.png"
+
 
 const Projects = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const toggleDescription = () => setIsExpanded(!isExpanded);
-  const cards = [
+
+  const projects = [
     {
-      title: "SnapFix",
-      image: snapfix,
-      desc: "SnapFix is a full-stack web application that connects users with verified home service professionals for quick and reliable repair or maintenance tasks. The platform offers seamless service booking, real-time status updates, user authentication, and role-based dashboards for both users and providers.",
-      tags: ["React", "React-Router", "Context API", "MongoDB", "Node.js", "Express.js", "JWT", "Tailwind"],
-      live: "https://snap-fix-assignment-11.web.app",
-      code: "https://github.com/Rakib-Hasan1/SnapFix-client",
+      id: "SnapFix",
+      name: "SnapFix",
+      image:  project1 ,
+      techStack: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express.js"],
+      description: "SnapFix is a user-friendly platform designed to connect local service seekers with trusted service providers quickly and efficiently. Whether you need a plumber, electrician, cleaner, or any other professional service, SnapFix simplifies your search by offering a curated list of verified providers in your area",
+      liveLink: "https://snap-fix-assignment-11.web.app/",
+      githubClient: "https://github.com/Rakib-Hasan1/SnapFix-client",
+      challenges: "Integrating real-time search was challenging...",
+      futurePlans: "Add social media sharing and mobile app support.",
     },
     {
-      title: "ProFast",
-      image: "",
-      desc: "",
-      tags: ["React", "React-Router", "Context API", "MongoDB", "Node.js", "Express.js", "JWT", "Tailwind", "Stripe"],
-      live: "",
-      code: "",
+      id: "TrackForce",
+      name: "TrackForce",
+      image:  project2 , // replace with your actual import or image variable
+      techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      description:
+        "TrackForce is a comprehensive Employee Management Web Application that streamlines HR workflows, including employee verification, payroll management, and role-based access. It enables HR teams to efficiently manage employee data, verify credentials, and handle salary payments within a secure and user-friendly interface.",
+      liveLink: "https://trackforce.web.app/", // update with your live URL
+      githubClient: "https://github.com/Rakib-Hasan1/TrackForce-client",
+      challenges:
+        "Implementing role-based authentication and dynamic dashboards for different user roles presented complex state management challenges.",
+      futurePlans:
+        "Integrate advanced reporting features and enhance the mobile responsiveness for better accessibility.",
+    },
+    {
+      id: "ProFast",
+      name: "ProFast",
+      image:  project3 , // replace with your actual import or image variable
+      techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Firebase Authentication"],
+      description:
+        "ProFast is a parcel delivery platform designed to connect senders with reliable couriers. It features real-time order tracking, dynamic pricing, and a smooth booking process, ensuring parcels reach their destinations promptly and securely.",
+      liveLink: "https://profact-parcel-delivery.web.app/", // update with your live URL
+      githubClient: "https://github.com/Rakib-Hasan1/ProFast-client",
+      challenges:
+        "Ensuring real-time tracking and handling multiple courier assignments simultaneously required complex backend logic.",
+      futurePlans:
+        "Implement in-app payments and develop a dedicated mobile application to enhance user experience.",
     },
   ];
 
+
   return (
-    <section
-      id="projects"
-      className="bg-[#0f172a] text-white py-16 px-6 md:px-16"
-    >
-      <div className="max-w-6xl mx-auto">
-        {/* Animated heading */}
-        <motion.h2
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-cyan-400 mb-12 text-center"
-        >
+    <section className='bg-gradient-to-b from-[#1b2c45] to-[#214559]'>
+      <div id="projects" className="py-10 px-6 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-cyan-400 mb-12 text-center">
           My Projects
-        </motion.h2>
-
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {cards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-[#1e293b] p-5 rounded-xl shadow-md hover:scale-[1.03] transition"
-            >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="rounded-lg mb-4 w-full h-44 object-cover"
-              />
-              <h3 className="text-xl font-semibold text-cyan-300 mb-2">
-                {card.title}
-              </h3>
-
-              <div className="mb-3">
-                <p
-                  className={`text-gray-400 text-sm ${isExpanded ? "" : "line-clamp-2"
-                    }`}
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map(project => (
+            <div key={project.id} className="bg-[#1e293b] rounded-xl shadow-md overflow-hidden flex flex-col">
+              <img src={project.image} alt={project.name} className="w-full h-48 object-cover object-top" />
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold text-white mb-4">{project.name}</h3>
+                <Link
+                  to={`/${project.id}`}
+                  className="mt-auto inline-block px-4 py-2 bg-cyan-500 rounded hover:bg-cyan-600 text-white text-center transition-colors"
                 >
-                  {card.desc}
-                </p>
-
-                {card.desc.split(" ").length > 15 && (
-                  <button
-                    onClick={toggleDescription}
-                    className="text-blue-500 text-sm focus:outline-none cursor-pointer hover:underline"
-                  >
-                    {isExpanded ? "See less" : "Read more"}
-                  </button>
-                )}
+                  Details
+                </Link>
               </div>
-
-
-              {/* <p className="text-gray-400 text-sm mb-4">{card.desc}</p> */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {card.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-cyan-600 px-2 py-1 rounded text-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={card.live}
-                  className="text-cyan-400 hover:underline"
-                >
-                  Live
-                </a>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={card.code}
-                  className="text-cyan-400 hover:underline"
-                >
-                  Code
-                </a>
-              </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default Projects;

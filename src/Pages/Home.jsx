@@ -9,16 +9,18 @@ import Contact from "../Components/Contact";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../Components/Footer";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-br from-[#1c4e6b] to-[#08548f]">
+    <div>
       <Navbar></Navbar>
       <Hero></Hero>
       <AboutMe></AboutMe>
       <Skills></Skills>
       <Projects></Projects>
       <Contact></Contact>
+      <Footer></Footer>
       <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );

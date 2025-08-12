@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-[#0f172a] text-white py-16 px-6 md:px-24 lg:px-38">
-      <div className="max-w-5xl mx-auto text-center md:text-left">
+    <section
+      id="about"
+      className="bg-[#092839] text-white py-10 px-6 md:px-24 lg:px-38"
+    >
+      <div className="text-center md:text-left">
         {/* Heading */}
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
@@ -24,28 +27,38 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="text-gray-300 text-lg leading-relaxed mb-10"
         >
-          I'm <span className="text-cyan-400 font-bold">Rakib Hasan</span>, a
+          I’m <span className="text-cyan-400 font-bold">Rakib Hasan</span>, a
           self-taught and deeply passionate{" "}
           <span className="text-cyan-300 font-medium">
             Full Stack Developer
           </span>{" "}
-          on a mission to craft impactful digital experiences. My journey began
-          with curiosity and a laptop, but transformed into something bigger
-          when I found my way to{" "}
-          <span className="text-cyan-300 font-medium">Programming Hero</span>.
-          Since then, I've been building full-stack applications that don't just
-          work — they feel good to use.
+          driven by curiosity, creativity, and the thrill of building something
+          from scratch. My programming journey began with nothing more than a
+          laptop and the desire to understand how websites work. That spark
+          quickly grew into a commitment to mastering modern technologies, and
+          finding my way to{" "}
+          <span className="text-cyan-300 font-medium">Programming Hero</span>{" "}
+          turned my learning into a full-fledged development journey.
           <br />
           <br />
-          What drives me is more than just writing code. It's about creating
-          solutions that solve real problems, building beautiful and intuitive
-          interfaces, and making the web a better place one line at a time.
+          I thrive on creating clean, functional, and visually appealing
+          applications — whether it’s crafting intuitive UIs, building robust
+          backends, or ensuring everything runs smoothly from front to back.
+          Solving real-world problems and watching an idea come to life on the
+          screen is what fuels my passion for coding.
           <br />
           <br />
-          I'm not just learning to get hired — I'm learning to make a
-          difference. My dream is to grow into a developer who can lead teams,
-          build products that matter, and never stop pushing the limits of
-          what's possible on the web.
+          Outside of programming, I’m an active and curious person. I enjoy
+          exploring new technologies, but I also take time to recharge — whether
+          it’s playing football with friends, going for walks to clear my head,
+          or diving into photography to capture unique perspectives. I believe
+          creativity off the screen helps me become a better problem-solver on
+          it.
+          <br />
+          <br />
+          My goal is not just to be a developer, but to be someone who builds
+          products that truly make an impact, collaborates with great teams, and
+          never stops learning.
         </motion.p>
 
         {/* Info Cards */}

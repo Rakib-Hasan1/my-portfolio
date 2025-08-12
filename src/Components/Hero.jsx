@@ -4,14 +4,14 @@ import image from "../assets/My-photo.jpg"
 import Typewriter from 'typewriter-effect';
 import cv from "/stack developer resume.pdf"
 import banner from "../assets/banner.jpg"
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
 
   return (
     <section
       id="home"
-      className="py-15 lg:py-0 lg:min-h-[70vh] flex flex-col-reverse md:flex-row items-center justify-between gap-5 lg:gap-0 px-10 md:px-20 lg:px-40 relative"
+      className="bg-gradient-to-b from-[#367fb8] to-[#092839] py-15 lg:py-0 lg:min-h-[70vh] flex flex-col-reverse md:flex-row items-center justify-between gap-5 lg:gap-0 px-10 md:px-20 lg:px-40 relative"
     >
 
 
@@ -22,7 +22,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="flex-1 text-center md:text-left w-full"
       >
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight text-black">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight text-gray-900">
           Hi, I'm Rakib Hasan
         </h1>
         <div className="font-extrabold text-5xl text-cyan-400">
@@ -39,7 +39,7 @@ const Hero = () => {
               delay: 75
             }}
           />
-           <a
+          <a
             href={cv}
             download="Rakib Hasan full stack developer resume.pdf"
             className="btn btn-warning mx-auto text-center btn-xl mt-4 hover:scale-105 transition-transform"
@@ -47,17 +47,40 @@ const Hero = () => {
             Download CV
           </a>
           <div className="flex gap-4 justify-center md:justify-start text-2xl my-5 text-center">
-            <a href="https://www.facebook.com/md.rakib.hasan.0001" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 hover:scale-120 transition-colors">
+            <a
+              href="https://www.facebook.com/md.rakib.hasan.0001"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-200 hover:scale-110 transition-transform"
+            >
               <FaFacebook />
             </a>
-            <a href="https://www.linkedin.com/in/dev-mdrakib/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 hover:scale-120 transition-colors">
+            <a
+              href="https://www.linkedin.com/in/dev-mdrakib/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-200 hover:scale-110 transition-transform"
+            >
               <FaLinkedin />
             </a>
-            <a href="https://github.com/Rakib-Hasan1" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 hover:scale-120 transition-colors">
+            <a
+              href="https://github.com/Rakib-Hasan1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-200 hover:scale-110 transition-transform"
+            >
               <FaGithub />
             </a>
+            <a
+              href="mailto:dev.rakibhasan1@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-200 hover:scale-110 transition-transform"
+            >
+              <FaEnvelope />
+            </a>
           </div>
-         
+
         </div>
 
       </motion.div>
@@ -72,7 +95,7 @@ const Hero = () => {
         <img
           src={image}
           alt="Rakib Hasan"
-          className="w-64 h-64 md:w-72 md:h-72 object-cover object-top rounded-full shadow-[0_0_25px_#06b6d4]"
+          className="w-64 h-64 md:w-72 md:h-72 object-cover object-top rounded-full hover:scale-110 transition-transform shadow-[0_0_60px_#06b6d4,0_0_100px_#06b6d4]"
         />
       </motion.div>
     </section>
