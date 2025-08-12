@@ -1,43 +1,68 @@
 import React from "react";
 import { motion } from "framer-motion";
 import image from "../assets/My-photo.jpg"
-import { Link } from "react-scroll";
+import Typewriter from 'typewriter-effect';
+import cv from "/stack developer resume.pdf"
+import banner from "../assets/banner.jpg"
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Hero = () => {
 
   return (
     <section
       id="home"
-      className="min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-between md:gap-8 px-6 md:px-20 lg:px-40 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white relative"
+      className="py-15 lg:py-0 lg:min-h-[70vh] flex flex-col-reverse md:flex-row items-center justify-between gap-5 lg:gap-0 px-10 md:px-20 lg:px-40 relative"
     >
-
-      {/* Blue Radial Glow Background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
-        }}
-      />
-      {/* Your Content/Components */}
 
 
       {/* Left: Bio */}
       <motion.div
-        initial={{ x: -60, opacity: 0 }}
+        initial={{ x: -90, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
         className="flex-1 text-center md:text-left w-full"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-          Hi, I'm <span className="text-cyan-400">Rakib Hasan</span>
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight text-black">
+          Hi, I'm Rakib Hasan
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-          A passionate Junior <span className="text-cyan-300 font-semibold">Full Stack Developer</span> crafting clean, high-performance web experiences with a love for beautiful UI and scalable backend logic.
-        </p>
+        <div className="font-extrabold text-5xl text-cyan-400">
+          {/* Junior Full Stack Developer */}
+          <Typewriter
+            options={{
+              strings: [
+                "Full Stack Developer",
+                "Frontend Developer",
+                "React Enthusiast",
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 75
+            }}
+          />
+           <a
+            href={cv}
+            download="Rakib Hasan full stack developer resume.pdf"
+            className="btn btn-warning mx-auto text-center btn-xl mt-4 hover:scale-105 transition-transform"
+          >
+            Download CV
+          </a>
+          <div className="flex gap-4 justify-center md:justify-start text-2xl my-5 text-center">
+            <a href="https://www.facebook.com/md.rakib.hasan.0001" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 hover:scale-120 transition-colors">
+              <FaFacebook />
+            </a>
+            <a href="https://www.linkedin.com/in/dev-mdrakib/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 hover:scale-120 transition-colors">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/Rakib-Hasan1" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 hover:scale-120 transition-colors">
+              <FaGithub />
+            </a>
+          </div>
+         
+        </div>
 
       </motion.div>
 
-      {/* Right: Image */}
+      {/* Right: Image/banner */}
       <motion.div
         initial={{ x: 60, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

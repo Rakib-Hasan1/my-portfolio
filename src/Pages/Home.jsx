@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-br from-[#1c4e6b] to-[#08548f]">
       <Navbar></Navbar>
       <Hero></Hero>
       <AboutMe></AboutMe>
